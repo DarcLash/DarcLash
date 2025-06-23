@@ -171,15 +171,24 @@
         <span class="arrow">→</span>
       </div>
     </div>
+<footer id="footer-date">
+  © Studio Kaline
+</footer>
 
-    <footer>
-      © <span id="year"></span>
-    </footer>
   </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script>
+  const footer = document.getElementById('footer-date');
+  const meses = ["JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"];
+  const hoje = new Date();
+  const mes = meses[hoje.getMonth()];
+  const ano = hoje.getFullYear();
+  footer.textContent = `© ${mes} ${ano} Studio Kaline`;
+</script>
+
 
 </body>
 </html>
