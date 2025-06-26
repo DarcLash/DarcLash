@@ -18,13 +18,37 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(160deg, #2c1e1e 0%, #6b2f4b 50%, #3c1d3a 100%);
-      color: #f2e9e4;
+      background: linear-gradient(160deg, #2c1e1e 0%, #6b2f4b 50%, #d6cdd6 100%);
+      color: #f2e4f2;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
     }
+/* DEIXaR ANIMADO */
+.background-animado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(-45deg, #323bc5, #6b2f4b, #3c1d3a, #d71f7e);
+  background-size: 400% 400%;
+  animation: gradientAnim 15s ease infinite;
+}
+
+@keyframes gradientAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
     .container {
       display: flex;
@@ -141,6 +165,8 @@
   </style>
 </head>
 <body>
+<!-- FILTRO ANIMADO!! -->
+<div class="background-animado"></div>
 
   <div class="container">
     <div class="profile-wrapper">
