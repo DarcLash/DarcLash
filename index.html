@@ -1,157 +1,167 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studio Kaline</title>
+<!DOCTYPE html> <!-- Define que o documento segue o padrão HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
 
-  <!-- Fonte Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<head>
+  <meta charset="UTF-8" /> <!-- Define o conjunto de caracteres como UTF-8 (suporta acentos) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Faz o site se adaptar à tela do celular -->
+  <title>Studio Kaline</title> <!-- Define o título que aparece na aba do navegador -->
+
+  <!-- Importa a fonte Poppins do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Importa os ícones da biblioteca Font Awesome (usados para redes sociais) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
     * {
-      box-sizing: border-box;
+      box-sizing: border-box; /* Faz com que padding e border não aumentem o tamanho total dos elementos */
     }
 
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(160deg, #2c1e1e 0%, #6b2f4b 50%, #d6cdd6 100%);
-      color: #f2e4f2;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin: 0; /* Remove a margem padrão do navegador */
+      padding: 0; /* Remove o espaçamento interno padrão */
+      font-family: 'Poppins', sans-serif; /* Define a fonte da página */
+      background-color: #CAC6BE; /* Cor de fundo geral (rosa acinzentado claro) */
+      color: #000; /* Cor padrão do texto: preto */
+      min-height: 100vh; /* Garante que a altura mínima seja a da tela inteira */
+      display: flex; /* Usa Flexbox para centralizar o conteúdo */
+      justify-content: center; /* Centraliza horizontalmente */
+      align-items: center; /* Centraliza verticalmente */
+      padding: 20px; /* Espaçamento interno */
     }
-/* DEIXaR ANIMADO */
-.background-animado {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient(-45deg, #323bc5, #6b2f4b, #3c1d3a, #d71f7e);
-  background-size: 400% 400%;
-  animation: gradientAnim 15s ease infinite;
-}
-
-@keyframes gradientAnim {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 50px 20px;
-      width: 100%;
-      max-width: 700px;
-      text-align: center;
+      background: #9D978F; /* Cor de fundo do card principal (marrom acinzentado) */
+      border-radius: 50px; /* Arredonda os cantos */
+      padding: 50px 30px 60px; /* Espaço interno superior, lateral e inferior */
+      max-width: 720px; /* Largura máxima do container */
+      width: 100%; /* Ocupa toda a largura disponível */
+      text-align: center; /* Centraliza o conteúdo dentro do container */
+      box-shadow: 0 10px 40px rgba(143, 41, 82, 0.15); /* Sombra suave ao redor */
+      display: flex; /* Flexbox para alinhar elementos verticalmente */
+      flex-direction: column; /* Coloca os filhos em coluna */
+      align-items: center; /* Centraliza os filhos na horizontal */
     }
 
     .profile-wrapper {
-      width: 90%;
-      max-width: 350px;
-      aspect-ratio: 3/4;
-      overflow: hidden;
-      border-top-left-radius: 50% 35%;
-      border-top-right-radius: 50% 35%;
-      border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.4);
-      margin-bottom: 30px;
+      width: 90%; /* Usa 90% da largura disponível */
+      max-width: 360px; /* Limita a largura máxima */
+      aspect-ratio: 3 / 4; /* Proporção de largura por altura */
+      overflow: hidden; /* Esconde parte da imagem que ultrapassar */
+      border-radius: 50% 50% 25px 25px / 35% 35% 25px 25px; /* Formato arredondado estilizado (tipo gota) */
+      margin-bottom: 35px; /* Espaço inferior */
+      border: none; /* Remove borda */
+      box-shadow: none; /* Sem sombra */
+      transition: transform 0.4s ease; /* Animação suave ao passar o mouse */
+    }
+
+    .profile-wrapper:hover {
+      transform: scale(1.05); /* Aumenta levemente a imagem ao passar o mouse */
     }
 
     .profile-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      width: 100%; /* Imagem ocupa toda a largura */
+      height: 100%; /* Imagem ocupa toda a altura */
+      object-fit: cover; /* Cobre todo o espaço mantendo proporção */
     }
 
     h1 {
-      font-size: 36px;
-      margin: 0;
-      font-weight: 700;
+      font-size: 42px; /* Tamanho do título principal */
+      margin: 0 0 15px; /* Espaço inferior */
+      font-weight: 800; /* Negrito */
+      color: #0a0909; /* Cor preta */
     }
 
     .welcome-message {
-      font-size: 20px;
-      color: #f5d7e7;
-      margin: 20px 0 30px;
-      line-height: 1.6;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-bottom: 35px;
-    }
-
-    .social-icons a {
-      color: #f2e9e4;
-      font-size: 30px;
-      transition: transform 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      transform: scale(1.2);
+      font-size: 21px; /* Tamanho do texto */
+      color: #070707; /* Rosa queimado */
+      margin: 0 0 40px; /* Espaço inferior */
+      line-height: 1.6; /* Altura da linha */
+      font-weight: 500; /* Peso médio */
     }
 
     .link-list {
-      width: 100%;
-      max-width: 500px;
+      width: 100%; /* Ocupa 100% da largura disponível */
+      max-width: 520px; /* Limite de largura */
     }
+.link-item {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px #A4445A; /* sombra rosa queimado aplicada */
+  transition: transform 0.2s ease, background-color 0.3s;
+}
 
-    .link-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #bfa7a7;
-      padding: 18px 0;
-      font-size: 18px;
+    .link-item:hover {
+      background-color: #e6e6e6; /* Muda a cor de fundo ao passar o mouse */
+      transform: scale(1.02); /* Aumenta levemente o botão */
     }
 
     .link-item a {
-      color: #f2e9e4;
-      text-decoration: none;
-      flex-grow: 1;
+      color: #000; /* Cor do texto/link */
+      text-decoration: none; /* Remove sublinhado */
+      flex-grow: 1; /* Ocupa o espaço disponível */
     }
 
     .arrow {
-      font-size: 22px;
-      opacity: 0.7;
+      font-size: 22px; /* Tamanho da seta */
+      color: #888; /* Cor cinza clara */
+      transition: transform 0.3s ease, color 0.3s ease; /* Animações */
+    }
+
+    .link-item:hover .arrow {
+      transform: translateX(6px); /* Move a seta para a direita */
+      color: #000; /* Muda para preto */
+    }
+
+    .social-icons {
+      display: flex; /* Flexbox */
+      justify-content: center; /* Centraliza horizontalmente */
+      gap: 36px; /* Espaço entre os ícones */
+      margin-top: 45px; /* Espaço acima dos ícones */
+      margin-bottom: 30px; /* Espaço abaixo */
+    }
+
+    .social-icons a {
+      color: #000; /* Cor dos ícones */
+      font-size: 32px; /* Tamanho dos ícones */
+      transition: transform 0.3s ease, color 0.3s ease; /* Efeitos de animação */
+    }
+
+    .social-icons a:hover {
+      color: #444; /* Cor ao passar o mouse */
+      transform: scale(1.2); /* Aumenta o ícone */
     }
 
     footer {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #cbbfbf;
+      font-size: 14px; /* Tamanho do texto do rodapé */
+      color: #000000a0; /* Preto com opacidade */
+      margin-top: 20px; /* Espaço superior */
     }
 
-    /* Responsivo para telas menores */
+    /* Estilos para celular */
     @media (max-width: 480px) {
+      .container {
+        padding: 40px 20px 50px;
+      }
+
+      .profile-wrapper {
+        max-width: 300px;
+        margin-bottom: 28px;
+      }
+
       h1 {
-        font-size: 28px;
+        font-size: 30px;
       }
 
       .welcome-message {
         font-size: 18px;
-      }
-
-      .social-icons a {
-        font-size: 26px;
       }
 
       .link-item {
@@ -161,60 +171,79 @@
       .arrow {
         font-size: 20px;
       }
+
+      .social-icons {
+        gap: 26px;
+        margin-top: 36px;
+        margin-bottom: 20px;
+      }
+
+      .social-icons a {
+        font-size: 28px;
+      }
+
+      footer {
+        font-size: 13px;
+        margin-top: 20px;
+      }
     }
   </style>
 </head>
+
 <body>
-<!-- FILTRO ANIMADO!! -->
-<div class="background-animado"></div>
 
   <div class="container">
+    <!-- Imagem de perfil estilizada -->
     <div class="profile-wrapper">
       <img src="foto/lash.png" alt="Foto de Darc Kaline" class="profile-img" />
     </div>
 
+    <!-- Título do estúdio -->
     <h1>STUDIO KALINE</h1>
 
+    <!-- Mensagem de boas-vindas -->
     <div class="welcome-message">
       Bem-vinda ao meu cantinho! 💖<br />
       Agende seu horário aqui abaixo.
-    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e3e3e3"><path d="M480-80 200-360l56-57 184 184v-287h80v287l184-183 56 56L480-80Zm-40-520v-120h80v120h-80Zm0-200v-80h80v80h-80Z"/></svg>
     </div>
 
-    <div class="social-icons">
-      <a href="https://www.instagram.com/d.kalline?igsh=Z243YTljbWM4bWZ6&utm_source=qr" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@darckaline.lash?_t=ZM-8xQL8fdsoo1&_r=1" title="TikTok"><i class="fab fa-tiktok"></i></a>
-      <a href="https://wa.me/5579996450657?text=Ol%C3%A1%20Kaline%2C%20tenho%20d%C3%BAvidas%20e%20quero%20fazer%20um%20agendamento!%20%F0%9F%92%96" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    </div>
-
+    <!-- Lista de botões para links -->
     <div class="link-list">
       <div class="link-item">
-        <a href="https://wa.me/5579996450657?text=Ol%C3%A1%20Kaline%2C%20tenho%20d%C3%BAvidas%20e%20quero%20fazer%20um%20agendamento!%20%F0%9F%92%96">Agendamentos.</a>
+        <a href="https://wa.me/5579996450657?text=Olá%20Kaline%2C%20tenho%20dúvidas%20e%20quero%20agendar!">
+          <i class="fab fa-whatsapp"></i>&nbsp; Agendamentos e Dúvidas
+        </a>
         <span class="arrow">→</span>
       </div>
+
       <div class="link-item">
-        <a href="https://www.tiktok.com/@darckaline.lash?_t=ZM-8xQL8fdsoo1&_r=1">TikTok – Darc Kaline</a>
+        <a href="https://www.tiktok.com/@darckaline.lash">
+          <i class="fab fa-tiktok"></i>&nbsp; TikTok – Darc Kaline
+        </a>
         <span class="arrow">→</span>
       </div>
     </div>
-<footer id="footer-date">
-  © Studio Kaline
-</footer>
 
+    <!-- Ícones das redes sociais, agora abaixo dos botões -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/d.kalline" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5579996450657" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.tiktok.com/@darckaline.lash" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <!-- Rodapé com ano e mês atual gerado via JavaScript -->
+    <footer id="footer-date">© Studio Kaline</footer>
   </div>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Atualiza o rodapé com mês e ano atuais
+    const footer = document.getElementById('footer-date');
+    const meses = ["JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"];
+    const hoje = new Date();
+    const mes = meses[hoje.getMonth()];
+    const ano = hoje.getFullYear();
+    footer.textContent = `© ${mes} ${ano} Studio Kaline`;
   </script>
-  <script>
-  const footer = document.getElementById('footer-date');
-  const meses = ["JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"];
-  const hoje = new Date();
-  const mes = meses[hoje.getMonth()];
-  const ano = hoje.getFullYear();
-  footer.textContent = `© ${mes} ${ano} Studio Kaline`;
-</script>
-
 
 </body>
 </html>
